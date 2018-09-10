@@ -1,0 +1,503 @@
+*{
+	box-sizing: border-box; 
+	font-family: 'Open Sans', sans-serif;
+	margin-left: auto;
+	margin-top: auto;
+}
+html{
+	background-color: #e3e8e9;
+}
+
+nav{
+	height: 55px;
+	width: 100%;
+	border-bottom: 1px solid rgb(160, 160, 160);
+	position: fixed;
+	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);
+	z-index: 999;
+	background-color: white;
+	font-weight: 600;
+}
+
+section{
+	width: 38%;
+	min-width: 700px;
+	max-width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ul{
+	list-style-type: none;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+.boxtitle{
+	position: relative;	
+	background-color: rgb(0, 0, 0, 0);
+	font-size: 1.2em;
+	top: 12px;
+	left: 5%;
+	font-weight: 700;
+}
+
+.mainFeed{
+	width: 25%; /*was 38%*/
+	min-width: 700px;
+	max-width: 750px;
+	filter: blur(5px);
+	border-radius: 20px;
+	display: block;
+	padding-top: 80px;
+}
+
+#emProf, #abProf, #nhProf{
+	display: none;
+	padding-top: 103px;
+}
+#momentsFeed{
+	display: none;
+	padding-top: 160px;
+}
+
+.coverup_2{
+	width: 38%;
+	height: 85px;
+	position: absolute;
+	left: 31%;
+	top: 75px;
+	z-index: 50;
+	background-color: #e3e8e9;
+	padding-left: 5%;
+}
+
+#cUp{
+	width: 25%;
+	min-width: 700px;
+	max-width: 750px;
+	height: 80px;
+	background-color: white;
+	border-radius: 10px 10px 0px 0px;
+	position: absolute;
+	left: 31.4%;
+	top: 80px;
+	z-index: 100;
+	filter: blur(5px);
+}
+.cuText{
+	text-align: center;
+	padding-top: 26px;
+	font-weight: 600;
+	font-size: 1.2em;
+	color: rgb(110, 110, 110);
+}
+
+
+/* -- nav bar -- */
+
+.navword{
+	color: rgb(110, 110, 110);
+	float: left;
+	padding-top: 15px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1em;
+	width: 33%;
+	outline: none;
+}
+.navword:hover{
+	color: #73d8de;
+	cursor: pointer;
+}
+
+.navLogo{
+	position: fixed;
+	left: 1%;
+	margin-top: 1px;
+}
+.logout{
+	position: fixed;
+	left: 97%;
+	margin-top: 9px;
+}
+.logout:hover{
+	cursor: pointer;
+}
+
+
+/* -- login screen -- */
+
+#login{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: rgba(10, 10, 10, 0.5);
+	z-index: 900;
+}
+
+.loginBox{
+	width: 40%;
+	min-width: 700px;
+	max-width: 750px;
+	height: 38%;
+	margin: auto;
+	margin-top: 15%;
+	background-color: white;
+	border-radius: 10px;
+}
+
+.loginImg{
+	margin-top: 65px;
+	margin-left: 7%;
+}
+
+.loginTitle{
+	position: relative;
+	left: 45%;
+	top: -65%;
+}
+
+.lForm{
+	position: relative;
+	top: -67%;
+	left: 22.5%;
+}
+
+.loginForm{
+	border: 1px solid #b7babf;
+	border-radius: 7px;
+	padding: 5px 10px;
+	margin-top: 1.5%;
+	position: relative;
+	top: -67%;
+	left: 22.5%;
+	width: 38.5%;
+	outline: none;
+}
+.loginForm:focus{
+	border: 1px solid #17b4be
+}
+
+#loginButton{
+	cursor: pointer;
+	outline: none;
+}
+#loginButton:focus{
+	background-color: #17b4be;
+	font-weight: 600;
+	color: white;
+}
+
+
+/* -- user box -- */
+
+.userBox{
+	filter: blur(5px);
+	background-color: white;
+	width: 15%;
+	height: 75px;
+	position: fixed;
+	top: 80px;
+	left: 14.5%;
+	border-radius: 10px;
+	z-index: 50;	
+}
+
+.profileimg{
+	border-radius: 100%;
+	position: fixed;
+	top: 95px;
+	left: 15.4%;
+}
+
+.username{
+	color: rgb(110, 110, 110);
+	float: left;
+	padding-left: 28%;
+	padding-top: 5%;
+	text-decoration: none;
+	font-size: 1.1em;
+}
+.usertag{
+	color: rgb(110, 110, 110);
+	float: left;
+	position: fixed;
+	top: 118px;
+	left: 18.7%;
+	text-decoration: none;
+	font-size: 1em;
+	font-weight: 300;
+}
+.username:hover, .usertag:hover, .cuText:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+
+/* -- recommended box -- */
+
+#fBox{
+	border-radius: 10px;
+	width: 15%;
+	height: 285px;
+	position: fixed;
+	left: 14.5%;
+	top: 180px;
+	background-color: white;
+	filter: blur(5px);
+}
+
+.recTitle{
+	color: rgb(110, 110, 110);
+	font-size: 1.1em;
+	padding-left: 5%;
+	padding-top: 8px;
+}
+
+.followBox{
+	border-bottom: 1px solid #e3e8e9;
+	background-color: white;
+	height: 70px;
+	margin-bottom: 12px;
+}
+
+#endBox{
+	border-bottom: none;
+	height: 60px;
+}
+
+.followPic{
+	border-radius: 50%;
+	margin-top: 7px;
+	margin-left: 6%;
+}
+
+.followname{
+	position: relative;	
+	background-color: rgb(0, 0, 0, 0);
+	left: 29%;
+	top: -55px;
+	font-size: 0.9em;
+}
+.followname:hover{
+	cursor: pointer;
+	color: #17b4be;
+	text-decoration: underline;
+}
+
+.followtag{
+	position: relative;	
+	color: rgb(120, 120, 120);
+	background-color: rgb(0, 0, 0, 0);
+	left: 58%;
+	top: -88px;
+	font-size: 0.9em;
+	font-weight: lighter;
+}
+.followtag:hover{
+	cursor: pointer;
+}
+
+.followButton{
+	color: #17b4be;
+	border: 1px solid #17b4be;
+	border-radius: 10px;
+	background-color: white;
+	padding: 4px 20px;
+	position: relative;
+	top: -98px;
+	left: 80px;
+	font-weight: 600;
+	outline: none;
+}
+.followButton:hover{
+	background-color: #17b4be;
+	color: white;
+	cursor: pointer;
+}
+
+
+
+/* -- profile box -- */
+
+.profileBox{
+	background-color: white;
+	width: 15%;
+	height: 150px;
+	position: fixed;
+	top: 80px;
+	left: 14.5%;
+	border-radius: 10px;
+	z-index: 50;
+	display: none;
+}
+
+.profileName{
+	color: rgb(110, 110, 110);
+	float: left;
+	padding-left: 28%;
+	padding-top: 5%;
+	text-decoration: none;
+	font-size: 1.1em;
+}
+.profileName:hover{
+	text-decoration: underline;
+}
+.profileTag{
+	color: rgb(110, 110, 110);
+	float: left;
+	position: fixed;
+	top: 118px;
+	left: 18.7%;
+	text-decoration: none;
+	font-size: 1em;
+	font-weight: 300;
+}
+.profileTag:hover{
+	text-decoration: underline;
+}
+
+.pGrid{
+	width: 25%;
+	float: left;
+	font-size: 0.7em;
+	font-weight: 200;
+	color: rgb(110, 110, 110);
+	padding-left: 6%;
+	margin-top: 15px; 
+}
+.pGridNum{
+	width: 25%;
+	float: left;
+	font-size: 1.1em;
+	font-weight: 200;
+	color: rgb(110, 110, 110);
+	padding-left: 6%;
+	margin-top: -2px;
+}
+
+
+
+/* -- tweet box -- */
+
+.tweetBox{
+	background-color: white;
+	width: 15%;
+	height: 98px;
+	position: fixed;
+	top: 80px;
+	left: 70%;
+	border-radius: 10px;
+	z-index: 50;
+	filter: blur(5px);
+	-webkit-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
+}
+
+.tweetForm{
+	border: 1px solid rgb(200, 200, 200);
+	border-radius: 7px; 
+	margin-left: 5%;
+	margin-top: 15px;
+	width: 90%;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	outline: none;
+	-webkit-transition: padding-bottom 0.3s ease-in-out;
+    transition: padding-bottom 0.3s ease-in-out;
+}
+.tweetForm:focus{
+	border: 1px solid #73d8de;
+	padding-bottom: 80px;
+}
+
+.tweetBox:focus-within{
+	height: 170px;
+}
+
+.tweetButton{
+	border: 1px solid #17b4be;
+	background-color: #17b4be;
+	border-radius: 7px; 
+	width: 90%;
+	height: 30px;
+	color: white;
+	outline: none;
+	margin-top: 9px;
+	margin-left: 14px;
+	padding-top: 3px;
+	font-size: 0.9em;
+	font-weight: 600;
+	text-align: center;
+}
+.tweetButton:hover{
+	cursor: pointer;
+	background-color: #169ba4;
+	border: 1px solid #169ba4;
+}
+
+
+
+/* -- profile tweet box -- */
+
+.profileTweetBox{
+	background-color: white;
+	width: 15%;
+	height: 98px;
+	position: fixed;
+	top: 255px;
+	left: 14.5%;
+	border-radius: 10px;
+	z-index: 50;
+	-webkit-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
+    display: none;
+}
+
+.ptweetForm{
+	border: 1px solid rgb(200, 200, 200);
+	border-radius: 7px; 
+	margin-left: 5%;
+	margin-top: 15px;
+	width: 90%;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	outline: none;
+	-webkit-transition: padding-bottom 0.3s ease-in-out;
+    transition: padding-bottom 0.3s ease-in-out;
+}
+.ptweetForm:focus{
+	border: 1px solid #73d8de;
+	padding-bottom: 80px;
+}
+
+.profileTweetBox:focus-within{
+	height: 170px;
+}
+
+.ptweetButton{
+	border: 1px solid rgb(160, 160, 160);
+	background-color: rgb(160, 160, 160);
+	border-radius: 7px; 
+	width: 90%;
+	height: 30px;
+	color: white;
+	outline: none;
+	margin-top: 9px;
+	margin-left: 14px;
+	padding-top: 3px;
+	font-size: 0.9em;
+	font-weight: 600;
+	text-align: center;
+}
+.ptweetButton:hover{
+	cursor: pointer;
+	background-color: rgb(110, 110, 110);
+	border: 1px solid rgb(110, 110, 110);
+}

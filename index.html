@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>TweetEasy</title>
+	<link rel="stylesheet" href="css/style_main.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+	<script src="js/login.js"></script>
+	<script src="js/showProfile.js"></script>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<img class="navLogo" src="img/nav_logo_2.png" height="50" width="166">
+			<section>
+				<a class="navword" id="feed" onclick="goHome()">Home</a>
+				<a class="navword" id="moments" onclick="goMoments()">Moments</a>
+				<a class="navword" href="#messages">Notifications</a>
+			</section>	
+			<img class="logout" src="img/logout.png" height="35" width="35" onClick="window.location.reload()">
+		</nav>
+	</header>
+
+	<div id="login">
+		<div class="loginBox">
+			<img class="loginImg" src="img/Twitter_Logo_Teal.png" height="220" width="220">
+			<h1 class="loginTitle">Login with Twitter</h1>
+
+			<form class="lForm">
+				<input class="loginForm" type="text" name="loginForm" id="usernameInput" placeholder="Name">
+			<br>
+				<input class="loginForm" type="text" name="tagForm" id="tagInput" placeholder="@Username">
+			<br>
+				<input class="loginForm" type="password" name="passForm" id="passInput" placeholder="Password">
+			<br>
+				<input class="loginForm" id="loginButton" type="button" value="Login" onclick="login();">
+			</form>
+		</div>
+	</div>
+
+	<div id="uBox" class="userBox">
+		<img id="profimg" class="profileimg" src="img/prof_default.png" height="45" width="45">
+		<h2 id="uInput" class="username">Username</h2>
+	<br>
+		<h3 id="tInput" class="usertag">@usertag</h3>
+	</div>
+
+	<div id="fBox">
+		<h2 class="recTitle">Recommended for you</h2>
+		<div class="followBox">
+			<img src="img/nzherald.jpg" alt="The Onion Profile" width="45" height="45" class="followPic">
+			<h3 class="followname" onclick="changeProf('herald')">nzherald</h3>
+			<h3 class="followtag">@nzherald</h3>
+			<form>
+				<input class="followButton" type="button" name="followButton" value="Follow">
+			</form>
+		</div>
+		<div class="followBox">
+			<img src="img/allblacks.jpg" alt="The Onion Profile" width="45" height="45" class="followPic">
+			<h3 class="followname" onclick="changeProf('allblacks')">All Blacks</h3>
+			<h3 class="followtag">@AllBlacks</h3>
+			<form>
+				<input class="followButton" type="button" name="followButton" value="Follow">
+			</form>
+		</div>
+		<div class="followBox" id="endBox">
+			<img src="img/elonmusk.jpg" alt="The Onion Profile" width="45" height="45" class="followPic">
+			<h3 class="followname" onclick="changeProf('elon')">Elon Musk</h3>
+			<h3 class="followtag">@elonmusk</h3>
+			<form>
+				<input class="followButton" type="button" name="followButton" value="Follow">
+			</form>
+		</div>
+	</div>
+
+	<div id="pBox" class="profileBox">
+		<img id="profpageimg" class="profileimg" src="img/prof_default.png" height="45" width="45">
+		<h2 id="profName" class="profileName">Profile Name</h2>
+		<h3 id="profTag" class="profileTag">@profiletag</h3>
+	<br><br><br>
+		<div class="pGrid"> <h4>Tweets</h4> </div>
+		<div class="pGrid"> <h4>Following</h4> </div>
+		<div class="pGrid"> <h4>Followers</h4> </div>
+		<div class="pGrid"> <h4>Likes</h4> </div>
+	<br>
+		<div class="pGridNum" id="tweets"> <h4>0</h4> </div>
+		<div class="pGridNum" id="following"> <h4>0</h4> </div>
+		<div class="pGridNum" id="followers"> <h4>0</h4> </div>
+		<div class="pGridNum" id="likes"> <h4>0</h4> </div>
+	</div>
+
+	<div id="pTBox" class="profileTweetBox">
+		<form>
+			<input id="ptweetInput" class="ptweetForm" type="text" name="ptweetForm"  placeholder="Tweet to @usertag...">
+		</form>
+		<h3 id="pTButton" class="ptweetButton">Tweet to user</h3>
+	</div>
+
+	<div class="coverup_2">.</div>
+
+	<section id="cUp" class="coverup">
+		<h2 id="headerText" class="cuText">@usertag's timeline</h2>
+	</section>
+
+	<section id="mFeed" class="mainFeed">
+		<a class="twitter-timeline" href="https://twitter.com/throwaway6482/lists/list-for-201?ref_src=twsrc%5Etfw">A Twitter List by throwaway6482</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</section>
+
+	<section id="emProf" class="mainFeed">
+		<a class="twitter-timeline" data-link-color="#17b4be" href="https://twitter.com/elonmusk?ref_src=twsrc%5Etfw">Tweets by elonmusk</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</section>
+
+	<section id="abProf" class="mainFeed">
+		<a class="twitter-timeline" data-link-color="#17b4be" href="https://twitter.com/AllBlacks?ref_src=twsrc%5Etfw">Tweets by AllBlacks</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</section>
+
+	<section id="nhProf" class="mainFeed">
+		<a class="twitter-timeline" data-link-color="#17b4be" href="https://twitter.com/nzherald?ref_src=twsrc%5Etfw">Tweets by nzherald</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</section>
+
+	<section id="momentsFeed" class="mainFeed">
+		<a class="twitter-grid" data-partner="tweetdeck" href="https://twitter.com/throwaway6482/timelines/1037268721146900481?ref_src=twsrc%5Etfw">201</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</section>
+
+	<div id="tBox" class="tweetBox">
+		<form>
+			<input id="tweetInput" class="tweetForm" type="text" name="tweetForm"  placeholder="Tweet to the world from here...">
+			
+		</form>
+		<h3 class="tweetButton">Tweet</h3>
+	</div>
+</body>
+</html>
