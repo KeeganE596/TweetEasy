@@ -3,6 +3,7 @@
 	font-family: 'Open Sans', sans-serif;
 	margin-left: auto;
 	margin-top: auto;
+	color: rgb(110, 110, 110);
 }
 html{
 	background-color: #e3e8e9;
@@ -20,11 +21,8 @@ nav{
 }
 
 section{
-	width: 38%;
-	min-width: 700px;
-	max-width: 750px;
-	margin-left: auto;
-	margin-right: auto;
+	width: 100%;
+	
 }
 
 ul{
@@ -50,9 +48,12 @@ a{
 	min-width: 700px;
 	max-width: 750px;
 	filter: blur(5px);
-	border-radius: 20px;
+	border-radius: 30px;
 	display: block;
 	padding-top: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 50;
 }
 
 #emProf, #abProf, #nhProf{
@@ -62,17 +63,6 @@ a{
 #momentsFeed{
 	display: none;
 	padding-top: 160px;
-}
-
-.coverup_2{
-	width: 38%;
-	height: 85px;
-	position: absolute;
-	left: 31%;
-	top: 75px;
-	z-index: 50;
-	background-color: #e3e8e9;
-	padding-left: 5%;
 }
 
 #cUp{
@@ -87,20 +77,25 @@ a{
 	top: 80px;
 	z-index: 100;
 	filter: blur(5px);
+	margin-left: auto;
+	margin-right: auto;
 }
 .cuText{
 	text-align: center;
 	padding-top: 26px;
 	font-weight: 600;
 	font-size: 1.2em;
-	color: rgb(110, 110, 110);
+}
+
+#left{
+	width: 25%;
+	border: 2px solid grey;
 }
 
 
 /* -- nav bar -- */
 
 .navword{
-	color: rgb(110, 110, 110);
 	float: left;
 	padding-top: 15px;
 	text-align: center;
@@ -112,6 +107,12 @@ a{
 .navword:hover{
 	color: #73d8de;
 	cursor: pointer;
+}
+
+.navWidth{
+	width: 35%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .navLogo{
@@ -142,8 +143,10 @@ a{
 .loginBox{
 	width: 40%;
 	min-width: 700px;
-	max-width: 750px;
+	max-width: 700px;
 	height: 38%;
+	min-height: 400px;
+	max-height: 400px;
 	margin: auto;
 	margin-top: 15%;
 	background-color: white;
@@ -151,19 +154,20 @@ a{
 }
 
 .loginImg{
-	margin-top: 65px;
+	margin-top: 13%;
 	margin-left: 7%;
 }
 
 .loginTitle{
 	position: relative;
 	left: 45%;
-	top: -65%;
+	top: -61%;
+	color: black;
 }
 
 .lForm{
 	position: relative;
-	top: -67%;
+	top: -60%;
 	left: 22.5%;
 }
 
@@ -173,9 +177,9 @@ a{
 	padding: 5px 10px;
 	margin-top: 1.5%;
 	position: relative;
-	top: -67%;
+	top: -60%;
 	left: 22.5%;
-	width: 38.5%;
+	width: 41.5%;
 	outline: none;
 }
 .loginForm:focus{
@@ -185,11 +189,18 @@ a{
 #loginButton{
 	cursor: pointer;
 	outline: none;
+	border: 1px solid rgb(160, 160, 160);
+	background-color: rgb(160, 160, 160);
+	color: white;
+	font-weight: 400;
+}
+#loginButton:hover{
+	border: 1px solid rgb(110, 110, 110);
+	background-color: rgb(110, 110, 110);
 }
 #loginButton:focus{
 	background-color: #17b4be;
-	font-weight: 600;
-	color: white;
+	border: 1px solid #17b4be;
 }
 
 
@@ -199,6 +210,8 @@ a{
 	filter: blur(5px);
 	background-color: white;
 	width: 15%;
+	max-width: 285px;
+	min-width: 285px;
 	height: 75px;
 	position: fixed;
 	top: 80px;
@@ -209,13 +222,12 @@ a{
 
 .profileimg{
 	border-radius: 100%;
-	position: fixed;
-	top: 95px;
-	left: 15.4%;
+	position: relative;
+	top: 15px;
+	left: -37%;
 }
 
 .username{
-	color: rgb(110, 110, 110);
 	float: left;
 	padding-left: 28%;
 	padding-top: 5%;
@@ -225,9 +237,9 @@ a{
 .usertag{
 	color: rgb(110, 110, 110);
 	float: left;
-	position: fixed;
-	top: 118px;
-	left: 18.7%;
+	position: relative;
+	top: -14px;
+	left: -16%;
 	text-decoration: none;
 	font-size: 1em;
 	font-weight: 300;
@@ -243,6 +255,8 @@ a{
 #fBox{
 	border-radius: 10px;
 	width: 15%;
+	max-width: 285px;
+	min-width: 285px;
 	height: 285px;
 	position: fixed;
 	left: 14.5%;
@@ -252,7 +266,6 @@ a{
 }
 
 .recTitle{
-	color: rgb(110, 110, 110);
 	font-size: 1.1em;
 	padding-left: 5%;
 	padding-top: 8px;
@@ -282,6 +295,7 @@ a{
 	left: 29%;
 	top: -55px;
 	font-size: 0.9em;
+	color: black;
 }
 .followname:hover{
 	cursor: pointer;
@@ -291,7 +305,6 @@ a{
 
 .followtag{
 	position: relative;	
-	color: rgb(120, 120, 120);
 	background-color: rgb(0, 0, 0, 0);
 	left: 58%;
 	top: -88px;
@@ -327,6 +340,8 @@ a{
 .profileBox{
 	background-color: white;
 	width: 15%;
+	max-width: 285px;
+	min-width: 285px;
 	height: 150px;
 	position: fixed;
 	top: 80px;
@@ -335,9 +350,11 @@ a{
 	z-index: 50;
 	display: none;
 }
+#profpageimg{
+	left: -49%;
+}
 
 .profileName{
-	color: rgb(110, 110, 110);
 	float: left;
 	padding-left: 28%;
 	padding-top: 5%;
@@ -348,7 +365,6 @@ a{
 	text-decoration: underline;
 }
 .profileTag{
-	color: rgb(110, 110, 110);
 	float: left;
 	position: fixed;
 	top: 118px;
@@ -366,18 +382,16 @@ a{
 	float: left;
 	font-size: 0.7em;
 	font-weight: 200;
-	color: rgb(110, 110, 110);
 	padding-left: 6%;
-	margin-top: 15px; 
+	margin-top: -8px; 
 }
 .pGridNum{
 	width: 25%;
 	float: left;
 	font-size: 1.1em;
 	font-weight: 200;
-	color: rgb(110, 110, 110);
 	padding-left: 6%;
-	margin-top: -2px;
+	margin-top: -4px;
 }
 
 
@@ -387,6 +401,8 @@ a{
 .tweetBox{
 	background-color: white;
 	width: 15%;
+	max-width: 285px;
+	min-width: 285px;
 	height: 98px;
 	position: fixed;
 	top: 80px;
@@ -430,9 +446,9 @@ a{
 	outline: none;
 	margin-top: 9px;
 	margin-left: 14px;
-	padding-top: 3px;
+	padding-top: 4px;
 	font-size: 0.9em;
-	font-weight: 600;
+	font-weight: 400;
 	text-align: center;
 }
 .tweetButton:hover{
@@ -448,6 +464,8 @@ a{
 .profileTweetBox{
 	background-color: white;
 	width: 15%;
+	max-width: 285px;
+	min-width: 285px;
 	height: 98px;
 	position: fixed;
 	top: 255px;
@@ -491,13 +509,102 @@ a{
 	outline: none;
 	margin-top: 9px;
 	margin-left: 14px;
-	padding-top: 3px;
+	padding-top: 4px;
 	font-size: 0.9em;
-	font-weight: 600;
+	font-weight: 400;
 	text-align: center;
 }
 .ptweetButton:hover{
 	cursor: pointer;
 	background-color: rgb(110, 110, 110);
 	border: 1px solid rgb(110, 110, 110);
+}
+
+
+/* -- notifications stuff -- */
+
+#notifsFeed{
+	display: none;
+	padding-top: 161px;
+}
+
+.notification{	
+	background-color: white;
+	height: 120px;
+	margin-bottom: 1px;
+}
+
+.nImg{
+	border-radius: 100%;
+	margin-top: 12px;
+	margin-left: 2%;
+}
+
+.nHeading{
+	font-size: 1em;
+	font-weight: 400;
+	position: relative;
+	top: -27px;
+	left: 8%;
+	color: black;
+}
+
+.nTHeading{
+	font-size: 0.9em;
+	font-weight: 400;
+}
+
+.nTweetFill{
+	font-size: 0.9em;
+	margin-top: -11px;
+	color: black;
+}
+
+.nTweet{
+	border-radius: 10px;
+	border: 1px solid #b7babf;
+	width: 80%;
+	height: 56px;
+	padding-top: 6px;
+	padding-left: 1.5%;
+	position: relative;
+	left: -12%;
+	top: -32px;
+}
+.nTweet:hover{
+	cursor: pointer;
+	background-color: #f5f8fa;
+}
+
+.nTHeading:hover{
+	text-decoration: underline;
+}
+
+strong{
+	color: black;
+}
+
+.nEndcap{	
+	background-color: white;
+	height: 70px;
+	border-radius: 0px 0px 10px 10px;
+}
+
+.nLoad{
+	border: 1px solid #17b4be;
+	border-radius: 10px;
+	color: #17b4be;
+	width: 30%;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	top: 17px;
+	padding-left: 18px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 0.9em;
+}
+.nLoad:hover{
+	cursor: pointer;
+	background-color: #f5f8fa;
 }

@@ -20,6 +20,7 @@ function login(){
 		document.getElementById('tBox').style.filter = "none";
 		document.getElementById('fBox').style.filter = "none";
 		document.getElementById('cUp').style.filter = "none";
+		document.getElementById('notifs').style.filter = "none";
 
 		document.getElementById('feed').style.color = "#17b4be";
 		document.getElementById('feed').style.fontWeight = "700";

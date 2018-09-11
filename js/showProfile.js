@@ -1,13 +1,27 @@
-function goHome(){
+function clearAll(){
 	document.getElementById('abProf').style.display = "none";
 	document.getElementById('emProf').style.display = "none";
 	document.getElementById('nhProf').style.display = "none";
+	document.getElementById('momentsFeed').style.display = "none";
+	document.getElementById('notifsFeed').style.display = "none";
+	document.getElementById('mFeed').style.display = "none";
+
+	document.getElementById('uBox').style.display = "none";
+	document.getElementById('fBox').style.display = "none";
 	document.getElementById('pBox').style.display = "none";
 	document.getElementById('pTBox').style.display = "none";
-	document.getElementById('momentsFeed').style.display = "none";
+	
 	document.getElementById('moments').style.color = "rgb(110, 110, 110)";
 	document.getElementById('moments').style.fontWeight = "600";
+	document.getElementById('feed').style.color = "rgb(110, 110, 110)";
+	document.getElementById('feed').style.fontWeight = "600";
+	document.getElementById('notiflink').style.color = "rgb(110, 110, 110)";
+	document.getElementById('notiflink').style.fontWeight = "600";
 
+}
+
+function goHome(){
+	clearAll();
 
 	document.getElementById('mFeed').style.display = "block";
 	document.getElementById('uBox').style.display = "block";
@@ -18,15 +32,7 @@ function goHome(){
 }
 
 function goMoments(){
-	document.getElementById('mFeed').style.display = "none";
-	document.getElementById('abProf').style.display = "none";
-	document.getElementById('emProf').style.display = "none";
-	document.getElementById('nhProf').style.display = "none";
-	document.getElementById('pBox').style.display = "none";
-	document.getElementById('pTBox').style.display = "none";
-	document.getElementById('feed').style.color = "rgb(110, 110, 110)";
-	document.getElementById('feed').style.fontWeight = "600";
-
+	clearAll();
 
 	document.getElementById('momentsFeed').style.display = "block";
 	document.getElementById('momentsFeed').style.filter = "none";
@@ -37,15 +43,20 @@ function goMoments(){
 	document.getElementById('moments').style.fontWeight = "700";
 }
 
+function goNotifs(){
+	clearAll();
+
+	document.getElementById('notifsFeed').style.display = "block";
+	document.getElementById('notifsFeed').style.filter = "none";
+	document.getElementById('uBox').style.display = "block";
+	document.getElementById('fBox').style.display = "block";
+	document.getElementById('headerText').innerHTML = '@' + tag + '\'s notifications';
+	document.getElementById('notiflink').style.color = "#17b4be";
+	document.getElementById('notiflink').style.fontWeight = "700";
+}
+
 function changeProf(changeTo){
-	document.getElementById('mFeed').style.display = "none";
-	document.getElementById('uBox').style.display = "none";
-	document.getElementById('fBox').style.display = "none";
-	document.getElementById('momentsFeed').style.display = "none";
-	document.getElementById('feed').style.color = "rgb(110, 110, 110)";
-	document.getElementById('feed').style.fontWeight = "600";
-	document.getElementById('moments').style.color = "rgb(110, 110, 110)";
-	document.getElementById('moments').style.fontWeight = "600";
+	clearAll();
 
 	switch(changeTo){
 		case 'herald':
@@ -61,9 +72,6 @@ function changeProf(changeTo){
 }
 
 function showNzherald(){
-	document.getElementById('abProf').style.display = "none";
-	document.getElementById('emProf').style.display = "none";
-
 	document.getElementById('nhProf').style.display = "block";
 	document.getElementById('nhProf').style.filter = "none";
 	document.getElementById('pBox').style.display = "block";
@@ -81,9 +89,6 @@ function showNzherald(){
 }
 
 function showElon(){
-	document.getElementById('abProf').style.display = "none";
-	document.getElementById('nhProf').style.display = "none";
-
 	document.getElementById('emProf').style.display = "block";
 	document.getElementById('emProf').style.filter = "none";
 	document.getElementById('pBox').style.display = "block";
@@ -101,9 +106,6 @@ function showElon(){
 }
 
 function showAllblacks(){
-	document.getElementById('emProf').style.display = "none";
-	document.getElementById('nhProf').style.display = "none";
-
 	document.getElementById('abProf').style.display = "block";
 	document.getElementById('abProf').style.filter = "none";
 	document.getElementById('pBox').style.display = "block";
