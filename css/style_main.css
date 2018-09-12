@@ -224,7 +224,8 @@ a{
 	border-radius: 100%;
 	position: relative;
 	top: 15px;
-	left: -25%;
+	left: -45%;
+	z-index: 50;
 }
 
 .username{
@@ -236,10 +237,9 @@ a{
 }
 .usertag{
 	color: rgb(110, 110, 110);
-	float: left;
 	position: relative;
 	top: -14px;
-	left: -3%;
+	left: -64px;
 	text-decoration: none;
 	font-size: 1em;
 	font-weight: 300;
